@@ -16,8 +16,8 @@ class Weibo():
 
         self.page_info = []   #  每个搜索页的所有信息
         self.driver = webdriver.Chrome()
-        self.username = '18713592750'
-        self.password = 'shao18713592750'
+        self.username = '***********'     # 帐号
+        self.password = '***********'　　　# 密码
         self.LoginWeibo()
         self.key_word = '银豆网'
         self.write_path = os.getcwd()+'/'+self.key_word+".xls"
@@ -186,23 +186,6 @@ if __name__ == "__main__":
 
     weibo = Weibo()
 
-    #weibo.get_all_user()
     weibo.get_all_page()
 
-    #frame = pd.DataFrame()
-    #frame.to_excel(excel_writer=path)
-    #mid = '415509014070918'
-    #out = pd.read_excel(path)
-    #a = {}
-    #a['mid'] = mid
-    #write_xls(a, path)
-
-'''
-    
-    url = 'https://weibo.com/1977407911/Gy7Jx1XWl?type=comment#_rnd1541035205737'
-    driver = weibo.driver
-    driver.get(url)
-    out = comment_info.comment(driver)
-    print(out.get_comment())
-    write_xls(out.get_comment(), weibo.write_path)
-'''
+  
